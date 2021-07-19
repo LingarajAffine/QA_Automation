@@ -1,0 +1,1605 @@
+[
+	{
+		"Apis": {
+			"APIName": "getDefaultSkillDetails",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3100/getDefaultSkillDetails?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFhaW4wMzk4IiwiZGF0ZXRpbWUiOiJNb24gTWFyIDAyIDIwMjAgMTc6MDk6MTYgR01UKzA1MzAgKEluZGlhIFN0YW5kYXJkIFRpbWUpIiwidXNlcnJvbGUiOjEsImlhdCI6MTU4MzE0OTE1Nn0.XQbNTXL6DjhUSV_DCOlMQ4OTTdIfntP31YUDhjhvjPc",
+			"requestType": "POST",
+			"Body": {
+				"data": {
+					"e_id": "AAIN0398"
+				}
+			},
+			"expected_result": {
+				"data[0]/result" : "success"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "store_finder",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/store_finder",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_zip_code": "29714"
+			},
+			"expected_result": {
+				"status/message": "Success.",
+				"status/code": "200"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "create_ddc_appraisal",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/create_ddc_appraisal",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_vin": "WA1L2AFP1HA056000",
+				"sonic_wui_mileage": "43",
+				"sonic_wui_store_id": "2019"
+			},
+			"expected_result": {
+				"status/message": "Success.",
+				"status/code": "200",
+				"data/VehicleID": "soft_validation/Number",
+				"data/IsVehicleAlreadyExist": "soft_validation/Boolean"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "save_vehicle_details_DDC",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/save_vehicle_details_DDC",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_store_id": "2019",
+				"sonic_wui_vehicle_id": "184210",
+				"sonic_wui_invtr_id": "1",
+				"sonic_wui_odometer": "Accurate",
+				"sonic_wui_year": "2019",
+				"sonic_wui_year_id": "2019",
+				"sonic_wui_trim_id": "436666",
+				"sonic_wui_trim": "SE Sedan 4D",
+				"sonic_wui_transmission": "Automatic, 6-Spd w/Overdrive & Shiftronic",
+				"sonic_wui_transmission_id": "8468856",
+				"sonic_wui_interior_type": "Leather",
+				"sonic_wui_int_color": "Black",
+				"sonic_wui_ext_color": "Black",
+				"sonic_wui_drivetrain": "FWD",
+				"sonic_wui_drivetrain_id": "8468853",
+				"sonic_wui_engine": "4-Cyl, 1.6 Liter",
+				"sonic_wui_engine_id": "8468854",
+				"sonic_wui_vin": "3KPC24A32KE039786",
+				"sonic_wui_mileage": 39784,
+				"sonic_wui_make": "Hyundai",
+				"sonic_wui_make_id": "20",
+				"sonic_wui_model_id": "136",
+				"sonic_wui_model": "Accent"
+			},
+			"expected_result": {
+				"status/message": "Success.",
+				"data/IsSaveVehicleDetails": "soft_validation/Boolean"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_all_options",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/get_all_options",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_store_id": "2019",
+				"sonic_wui_vin": "KL1TG566X8B073224",
+				"sonic_wui_vehicle_id": "183980",
+				"sonic_wui_invtr_id": "1",
+				"sonic_wui_trim_id": "196976"
+			},
+			"expected_result": {
+				"status/message": "Success.",
+				"status/code": "200",
+				"data/StandardOptions[0]/optionId": "soft_validation/Number",
+				"data/StandardOptions[0]/isSelected": "soft_validation/BooleanText",
+				"data/StandardOptions[0]/isStandardOption": "soft_validation/Boolean",
+				"data/AdditionalOptions[0]/optionId": "soft_validation/Number",
+				"data/AfterMarketQs[0]/AfterMarketOptionId": "soft_validation/Number"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "save_all_options",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/save_all_options",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_user_name": "SonicOnlineSalesApp",
+				"sonic_wui_store_id": "2019",
+				"sonic_wui_vehicle_id": "183864",
+				"sonic_wui_invtr_id": "1",
+				"sonic_wui_options": [
+					{
+						"optionId": 4615328,
+						"displayName": "Traction Control",
+						"isSelected": "True",
+						"isStandardOption": true
+					},
+					{
+						"optionId": 4615329,
+						"displayName": "Stability Control",
+						"isSelected": "True",
+						"isStandardOption": true
+					},
+					{
+						"optionId": 4615330,
+						"displayName": "ABS (4-Wheel)",
+						"isSelected": "True",
+						"isStandardOption": true
+					},
+					{
+						"optionId": 7367030,
+						"displayName": "Anti-Theft System",
+						"isSelected": "True",
+						"isStandardOption": true
+					},
+					{
+						"optionId": 4615331,
+						"displayName": "Keyless Entry",
+						"isSelected": "True",
+						"isStandardOption": true
+					},
+					{
+						"optionId": 4615332,
+						"displayName": "Air Conditioning",
+						"isSelected": "True",
+						"isStandardOption": true
+					},
+					{
+						"optionId": 4615333,
+						"displayName": "Power Windows",
+						"isSelected": "True",
+						"isStandardOption": true
+					},
+					{
+						"optionId": 4615334,
+						"displayName": "Power Door Locks",
+						"isSelected": "True",
+						"isStandardOption": true
+					},
+					{
+						"optionId": 4615335,
+						"displayName": "Cruise Control",
+						"isSelected": "True",
+						"isStandardOption": true
+					},
+					{
+						"optionId": 4615336,
+						"displayName": "Power Steering",
+						"isSelected": "True",
+						"isStandardOption": true
+					},
+					{
+						"optionId": 4615337,
+						"displayName": "Tilt & Telescoping Wheel",
+						"isSelected": "True",
+						"isStandardOption": true
+					},
+					{
+						"optionId": 4615338,
+						"displayName": "AM/FM Stereo",
+						"isSelected": "True",
+						"isStandardOption": true
+					},
+					{
+						"optionId": 4615322,
+						"displayName": "CD/MP3 (Multi Disc)",
+						"isSelected": "True",
+						"isStandardOption": true
+					},
+					{
+						"optionId": 4615339,
+						"displayName": "Dual Air Bags",
+						"isSelected": "True",
+						"isStandardOption": true
+					},
+					{
+						"optionId": 4615340,
+						"displayName": "Side Air Bags",
+						"isSelected": "True",
+						"isStandardOption": true
+					},
+					{
+						"optionId": 4615341,
+						"displayName": "F&R Head Curtain Air Bags",
+						"isSelected": "True",
+						"isStandardOption": true
+					},
+					{
+						"optionId": 4615342,
+						"displayName": "Power Seat",
+						"isSelected": "True",
+						"isStandardOption": true
+					},
+					{
+						"optionId": 4615343,
+						"displayName": "Moon Roof",
+						"isSelected": "True",
+						"isStandardOption": true
+					},
+					{
+						"optionId": 4615344,
+						"displayName": "Daytime Running Lights",
+						"isSelected": "True",
+						"isStandardOption": true
+					},
+					{
+						"optionId": 4615327,
+						"displayName": "Alloy Wheels",
+						"isSelected": "True",
+						"isStandardOption": true
+					},
+					{
+						"optionId": 4615324,
+						"displayName": "Premium Sound",
+						"isSelected": "True",
+						"isStandardOption": false
+					},
+					{
+						"optionId": 4615323,
+						"displayName": "Navigation System",
+						"isSelected": "True",
+						"isStandardOption": false
+					},
+					{
+						"optionId": 7367028,
+						"displayName": "Fog Lights",
+						"isSelected": "True",
+						"isStandardOption": false
+					},
+					{
+						"optionId": 4615325,
+						"displayName": "Premium Wheels",
+						"isSelected": "False",
+						"isStandardOption": false
+					},
+					{
+						"optionId": 4615326,
+						"displayName": "Premium Wheels 19\"+",
+						"isSelected": "True",
+						"isStandardOption": false
+					},
+					{
+						"optionId": 6514407,
+						"displayName": "Black",
+						"isSelected": "False",
+						"isStandardOption": false
+					},
+					{
+						"optionId": 6514403,
+						"displayName": "Blue",
+						"isSelected": "False",
+						"isStandardOption": false
+					},
+					{
+						"optionId": 6514399,
+						"displayName": "Brown",
+						"isSelected": "False",
+						"isStandardOption": false
+					},
+					{
+						"optionId": 6514411,
+						"displayName": "Burgundy",
+						"isSelected": "False",
+						"isStandardOption": false
+					},
+					{
+						"optionId": 6514393,
+						"displayName": "Gray",
+						"isSelected": "False",
+						"isStandardOption": false
+					},
+					{
+						"optionId": 6869232,
+						"displayName": "Red",
+						"isSelected": "False",
+						"isStandardOption": false
+					},
+					{
+						"optionId": 6514414,
+						"displayName": "Silver",
+						"isSelected": "False",
+						"isStandardOption": false
+					},
+					{
+						"optionId": 6514395,
+						"displayName": "White",
+						"isSelected": "True",
+						"isStandardOption": false
+					}
+				]
+			},
+			"expected_result": {
+				"status/message": "Success.",
+				"data/IsSaveFactoryOptionsKBB": "soft_validation/Boolean"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "save_aftermarket_questions_sonic",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/save_aftermarket_questions_sonic",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_store_id": "2019",
+				"sonic_wui_vehicle_id": "184210",
+				"sonic_wui_invtr_id": "1",
+				"sonic_wui_aftermarket_questions": [
+					{
+						"AfterMarketOptionId": 2,
+						"Description": "Bumpers and/or Winch",
+						"OptionKindId": "AMFO",
+						"Is_AfterMarketOption_Select": false
+					},
+					{
+						"AfterMarketOptionId": 3,
+						"Description": "Vehicle Lifted or Lowered",
+						"OptionKindId": "AMFO",
+						"Is_AfterMarketOption_Select": false
+					},
+					{
+						"AfterMarketOptionId": 4,
+						"Description": "Wheels and/or Tires",
+						"OptionKindId": "AMFO",
+						"Is_AfterMarketOption_Select": false
+					}
+				]
+			},
+			"expected_result": {
+				"data/IsSaveFactoryOptions": "soft_validation/Boolean",
+				"status/message": "Success."
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_history_ddc",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/get_history_ddc",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_store_id": "2019",
+				"sonic_wui_vin": "1HGCP3F71CA022975",
+				"sonic_wui_vehicle_id": "183864",
+				"sonic_wui_invtr_id": "1"
+			},
+			"expected_result": {
+				"data[0]/questionId": "soft_validation/Text",
+				"data[0]/questionType": "soft_validation/Text",
+				"data[0]/label": "soft_validation/Text",
+				"data[1]/questionId": "soft_validation/Text",
+				"data[1]/questionType": "soft_validation/Text",
+				"data[1]/label": "soft_validation/Text",
+				"data[2]/questionId": "soft_validation/Text",
+				"data[2]/questionType": "soft_validation/Text",
+				"data[2]/label": "soft_validation/Text",
+				"data[3]/questionId": "soft_validation/Text",
+				"data[3]/questionType": "soft_validation/Text",
+				"data[3]/label": "soft_validation/Text",
+				"status/message": "Success."
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "save_history_ddc",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/save_history_ddc",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_vehicle_id": 184363,
+				"sonic_wui_invtr_id": 1,
+				"sonic_wui_store_id": 2001,
+				"sonic_wui_vin": "2C3CDXBG3DH638138",
+				"sonic_wui_answers": [
+					{
+						"questionId": "qp/82",
+						"questionType": "Boolean",
+						"label": "Do you have a free and clear title? Select “No” if your vehicle is leased or financed.",
+						"value": "Yes"
+					},
+					{
+						"questionId": "qp/76",
+						"questionType": "Boolean",
+						"label": "Has an insurance claim ever been filed on this vehicle?",
+						"value": "No"
+					},
+					{
+						"questionId": "qp/76/amount",
+						"questionType": "Integer",
+						"label": "How much were the total claims?",
+						"value": ""
+					},
+					{
+						"questionId": "qp/79",
+						"questionType": "Boolean",
+						"label": "Are 2 sets of keys and alarm pad (if applicable) available?",
+						"value": "Yes"
+					}
+				]
+			},
+			"expected_result": {
+				"data/IsSaveHistory": "soft_validation/Boolean",
+				"status/message": "Success."
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_vehicle_recon_details",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/get_vehicle_recon_details",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_store_id": "2001",
+				"sonic_wui_vehicle_id": "184363",
+				"sonic_wui_invtr_id": "1",
+				"sonic_wui_vin": "2C3CDXBG3DH638138"
+			},
+			"expected_result": {
+				"status/message": "Success.",
+				"data[0]/VehicleConditionCategoryName": "Mechanical",
+				"data[0]/options[0]/optionValue": "Flawless",
+				"data[1]/VehicleConditionCategoryName": "Interior",
+				"data[2]/VehicleConditionCategoryName": "Exterior"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "save_vehicle_recon_details",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/save_vehicle_recon_details",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_user_id": "sonic",
+				"sonic_wui_store_id": "2001",
+				"sonic_wui_vehicle_id": "184363",
+				"sonic_wui_invtr_id": "1",
+				"sonic_wui_answers": [
+					{
+						"VehicleConditionCategoryName": "Mechanical",
+						"VehicleConditionCategory": 0,
+						"optionValue": "Flawless",
+						"optionValueId": 0
+					},
+					{
+						"VehicleConditionCategoryName": "Interior",
+						"VehicleConditionCategory": 1,
+						"optionValue": "Flawless",
+						"optionValueId": 0
+					},
+					{
+						"VehicleConditionCategoryName": "Exterior",
+						"VehicleConditionCategory": 2,
+						"optionValue": "Flawless",
+						"optionValueId": 0
+					}
+				],
+				"sonic_wui_user_comment": null
+			},
+			"expected_result": {
+				"data/IsSaveReconDetails": "soft_validation/Boolean",
+				"status/message": "Success."
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_vehicle_photo",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/get_vehicle_photo",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_store_id": "2001",
+				"sonic_wui_vehicle_id": "184363",
+				"sonic_wui_invtr_id": "1",
+				"sonic_wui_vin": "2C3CDXBG3DH638138"
+			},
+			"expected_result": {
+				"status": "Success."
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_vehicle_info",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/welcome/get_vehicle_info",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_buying_vin": "5NPD84LF8JH316641",
+				"sonic_wui_store_id": "fortmillfordfd"
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "save_vehicle_photo",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/save_vehicle_photo",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_vehicle_id": "184363",
+				"sonic_wui_store_id": "2001",
+				"sonic_wui_invtr_id": "1",
+				"sonic_wui_photo_url": "",
+				"sonic_wui_photo_guide": "photo-interior-rear",
+				"sonic_wui_photo": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMWFhUXFRgbFxgYGB8aGhsXGBcYGBgZHxcfICggGBslHRcYITEiJSkrLi4uGB8zODMtNygtLisBCgoKDg0OGxAQGy0lHyUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0rLS0tLS0tLf/AABEIALcBEwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAGAgMEBQcAAQj/xABNEAABAgQDBAUHBgwEBgMBAAABAhEAAwQhEjFBBQZRYRMicYGRBzKhscHR8BQjQlSS4RUWFzNDUlNicoLS8VWistM0RGODk8JFhKMk/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAECAwQF/8QAKhEAAgICAgEEAQMFAQAAAAAAAAECEQMhEjEEE0FRYXEUIoEjM0JSkQX/2gAMAwEAAhEDEQA/AMVXMKi+sEG6WypE/GJuIrSQUpSpsQyIJa3F4lUO6kqoPzdUlMxQfApDAKbE2IKy0EW+z6SbTUxlVEmWtLlmWHGOxBIuGzvHPkyrj+1k2Vk/YEqYlRpyB0CAFpGIqnKcOsDQEPYcIpdpUvRdVik6hQYjtHGDBJlJlGZKUrpkICEEFg7nGSQWUWYXgP2rPVMmLKl4i7lR1LN3xlCbk++iGyJJBJws5A+DHikEFrx0qcQba2eJNOnEVWuGyyc6gRs3WxMsKRfQhiQVN38hyhnpUqVhVoLKJfPi2YEInbOmILsS9zdzaGOjRdQcE6H1Rmkn7k6sl7WMnCcAZSW+LWMVcyjmYkpwKxKSFBIBJKCHdhdmvDk3Z81kEjzyybhzwtpBrR7xulHTSyKqVYKSkIUtLFIdTeYxyytD5cFrZpFUD69lp6GWRNaZMLgEEIKbAdZrKBzeKsUy1qYBymxaCutrCtAQeuyQAEpAAa40sxOkV1POMsMQ6jxDM1wR4NlkYzjkdENr2KBQKjhZu20MqVoDBNWUEuahRQVGbq5DAnQvkB4wLqllJaOjHJS6KiLRN4xcbH2CqpJKSWSxWAylkEt1UWxHtIHOKmZKIGLDZ2cZPwix3dqalEx6VSsZbEkBwQC/W4DwhyurRQXSNzV07TJ056cJUZiVHD1ARhSkgllnuZs4lbE2fTYulkTUpSHStKzieW5KXYWIBzcm0TavaYmJVLUkzMVusCElTORhchuw8YG0qS6paUplhKyAkuS6UuwIOuV3744HklK7Bssd3NuKXMWCjDLKWR1XxKSfzmKxVplxi7n0y6QTqjoBMWWONOHpMBFy+pzsGLaQNbM3vk4DLVJUjDMdEyxEpJsQ7FtQIt9p7yAD5hXSJDFziUSGuNGIbOJlFxl1SYGe1szEpSr9ZRN87km54xabL2aqpkqwmWjo1Byss7ufO9hiom+mDfyfUyTTT1LTiSZqQQ1iGDjLnHTlfGFr2HJFbR7KWoFJmySiZ5xlMspWOslLZDW44xZ7O3QlYiVzVK67J+j1dbcb8sol0W6EiVPB6UlisgHIDIBwXdjrE2dNJWAo4wAz5ZFgRbNo5p5X/iyK+QarN358oBMolSkzFYECY68CXcgZFJ53HOJ1Ds6ZPQEzlzEdI7gspJCSys/NNkm/EwTSlMsOhNiTis4e1iMiSe+PZMzpUYSRq7kYil2y0MZyzNq62UDG3N0pcsp6LpFuGCiQEoWnrBRaxxPYENDEndla0SpnSpCwtRNgCkl2IUSXD6NwaDGllH5tXVwkMpPnEJyBL2sQOyIm15mAJAXhKdQHuVORezEHPkYr1pgDVVsNbYVLWoKKUqSUtdb3RMJZQGdhreLjcrYkqWyxKwTkqUk4rkpPFINlZEWyyN4tNoLkk3BK2dgSUhOHMBNnyBPOHpgMrq4yQQ7FXWwgBxlyPGJeR8aGRpiglKkia4dIwlNwFFiCbEjNsyICdl7qHp5iZ4wygTgCVkkOeqXF8JGp4QQVG0+kUwDEBiXBIAJzNgbue4RN2XNASpYcZAnjnf05NBDJKCaQUDFVuuZYwLWyEpxCYkglTk2a1rC/GLjYlGFS0kJKQXVhFha2RsxGo1iLUz+nWrpD1QkXGSL5tx483hjZu0MMtkvZ2D2y1s+fripTckLRfT9lAqJAlt++kFWWpIjoqBtFSusSsk/umOguQzpNCkrUoy+upypWQANnBFk8Iq9qVqpcpUtJUkknESXCknXFqNGhap9RiViWAgJ+ic3yBT2xP2ZR4+vNup0sGGFQsHUO70Q4unciUBuzZipgLMFXAOTuCSCe+IU+Y/A9ga8alIoUyup0aSlalvhSBhdNmxBgr1PATtDYCQCuXiKSXQhXnYfpBShZwfGOqGWLbfQNFAMTYRro3GJ2zpRAWo2IAAGrn7om7NomSSSym5tyEOStn3WNSM3e+g+NTBPKtoHHRXCfhup8+OUebQpSAFaEhr31Lt3ZxNkScDTFXSlifc2ucNz04lIITiSeJZi5+kB6IFJXohIut2Z0qS4X0QJ+lMQ62OieDkiLveWqWoPLSJowupZAM0B2Y3cJD5Dwit2epctGNIlqGHr4rqTzD53ELmT0YTivizGWFTgg4tX4RxTdysv2KJSjLCekQopJdRBwuB9EcLaiKmZUjG4TbQG57Hi92/KWTYuAAyTmLXI46RWDZhGILmJRYNiGbnSOzHKNWyCVMmzAzAIJTiABTcc879sRJoASZiwklmwsLOzG+vZo8XUmkkqQAUlWBAZQ6uI8xrEnY9JJKcE5HUJ66QWUeAxdsQskUNLYM06RgSFeaOssAAMcg4zOY8Y1DZ01EmjSqXTplKMlJXZAJQrMnCSWzLF84HtnqTKWAiWkpCnSgi7Z31U1s4dnVCZk3rHq2Ny5N+H0RmR3Rnky8uiky4mz0VMklaBjS2AAgBhqFaEDQGGpuxJc8OpZSoKdKwXcM1wRwzhWx6tCCCqwAt7YQusSrHwZmBexu94w5fAyFT7F+TFZRNdC3xJLEG/nFORTezxIrqUCmUrq9SUcJAAVhCbZc9C8Rto1wISQDaw4lufbFDUV56JaFWJs3aoPryi1ym9k2Uc0QX7m1SUUy3LOskNm7JDwITIn0c1paUhicRUzX4R15o3Ci5vQXCrSSQk3LuSWDG57+XKFSasJwqIto1jwDjtignVSuqMIciwPPm9o9r65sKQrIaa5G54xxrG2ZWXUraPSrWUgpCSwfLEQHuD64doqu5V1uF7Oz3N4oqafMUUpBwJAzd3GRyytDsyYlgkBg+dznpFOKspBMnaAXKSnEEhCS/7xv6CTFCjaZWCkglLgkaWya1jziBO2hglLSg+eQ/AZOe+14YpqgAMSMw7i7j1CEserGmX9PVqCiSSlmsm3VGYbTIemHdp7YBmYgS2CzKIuci4uD7jA7V1hViOT2J498QplYcncA9nBvbDWG9jsuZSwZqnIDpAcWToC9rvrbOLObVBNPLKFBwSpQN8IZaWAtxDeMCs+pZilJLm7jIkXD8C/oiLMryxCiWawBa8aLC2JsJKKqckC6g6jlfMl3z/vETp8KiP1Wu4cAFwRzy+DFCZpIuWdm9GUerrQMTguf7e6LWGmCL1G1UgZerW+oj2BnGTdvXHRp6I7CRE7q3NirJr+Pa0XNOgLWkODhSCXLW4AjOBYzwLMCWyPrhgbVUhlJLHxbnGPpNhYT7QquhmLluVJcpfEcsnBis+VqKQMRsPHiTFSdoYi6jiPxlHTa83Ydx1ivRfQi16cXBLdX1CFFYYEWJ5e2KITwSS9xkOfth6RUL4lufjA8Imy5E9I0zdxnnCUKQzcB3vA7UVBucV3hxFUpnJtkeL6Q/QdXYF4utwDq2Z79piDM2kVHC78baxWKqS7MTw9kHm6u4JUUzKokYhaXq1j1uHZGuPxrFQKK2niyyBHMvk0ShVoIYpCnuX0GuUarI3TpbE00tTWCVKJSOxI6veXeF1MlEkhEmjkZfRlgN/kjX9HF6THxMfTWs6UkAZXUMvF2h2TLnHrSwpWhKUqV/pTGrT9qzwwCAOWFvC8eGtqFB0qV3pA9arxovDj7hSMuHykt83MUxf82u3LzY9EqqKyfk84Pwkr8PNjRBtCqdiW4nClvXaKyr3rnIJAViINyEo+DFrwYvpCbS7BRPypr007jeUvuvhtCk1FSEkfJpl/+mt/9MFEre5Z86oKTw6IRNl7zBnM5Z5gAehjEvwIr2GqAabW1ATaRMBZj1V+1PCIdVOxISOgUg/SUXLly2lhGjfjMNJqzy6p9DQ7L3imKLIUT2pTAvDjHpDpGRzCMiw7SPfD1MopyYki2EhXgQbRsErak5VlISf+2/8A7RKn7GTMHzlPIVyMke8wSwrop7MaM5Q6qkKGWYYg9+QiIKsAvb44CNWqN1KUn/hgjmhak+hobRuTKIa60nRRBKTxBLHuif00fkjiZtK2oWOHW3YM9Pi0cKwhNsyX7wIvt5NyplO8yWCqXdwzqAzP8QHHhAjNJKi2Xb4RlLCk6AmTavGHyIAsMmERZdYcRf0FoZCmJ1Bt6YUiTe9hp64agkMnS6jMDNj8emI18QBHc2cNqWyg3HOFFZxgHsPhxhKNCJRn3AL3ewObi3cIjVSFhlNY6lo5RKC+LJmGbxN+UpwseD8zy5QuukCIaXwg6PkOwPeEMAnvPjp6Y6lucOjhzw7oWujZXIObcuWkXpMYuWCws8dCEY2/OEcjHsTQbETZpNxpCJqyQzMOPqEMkPyj1SnAjTiBKVTpCQoX9XPOI4XdzmIVInMwNx7/AFR50V72ELrsDyUpyf7fAh+WogZu55+ME2xty5yhiWBJBAIK3xFJ4SUhSvECHNp7ryJLg1JxgFgZeEOD5vnYrniIrhJ+wmCUxGbC3HjwhSVEjDHtViKingSG5gs0XW6mzBNWZ88ESJABWNVq+hLHEqOfIRKi3oC83O2CmX0U+d+cXeUk3wSxYziDZzkkHPseNSpl6AZDLM95NyeJ4wAzZq8RmLPzi2JbJNmSgcki1tXMcjbExCgpKi4BGb5jWPTh4r46M3lSdB1tjaipSUJlsZiywDjvMNbIqDNUVrGEpxJbnx+OMZ5V1S1nEpRJfjF3sfbU1KSnEVFWpOQ8NIcsHGOuxLLbCnaocgpYtf4MUFbtJcsOpILAkAHPiInbNplTE4sR4ODY5aQO75fNqCE97Brtf2xGOKb4lSerIlfvKpaSlKcJOZHCKSUoEl1N3PfxtDCjCCqOxRSWjF2+x+rkX1fshFOvD9F+Jhsks7xZ7PQhUrrAsFjER52HVuMTJpDjYjY9CZk1NgQ+tg+kGNFsdaASL5uSMuUX2y9mSChJlMqw62aj2nOLI0zCOKeW3o3jHQO7GLzBicMO4qJ9wgoVMDRClSQk2AvDkwGMpOy0eTDHtPMaGZhhCF3iRFhUJBDpsRwjJd/d10peqp0hKX+flgWQo5TEjSWXv+qSNDbVJSzFdtRGE48LpIIWlnBSfODa2JtrcawNJ6H2fPyUOriMoempBJFwALHXg0W29mwfkk7qB5MwFUpQv1SzpfUpfPUFJ1itpZXSLSlasANlKIJwp1UQLkcoxcXdCZBKA7B4cEuzF2sfEQWq3UpHUgVZCwSGVLtyOIKa/O8Qq7YikFV5aim7IIxBPEI4dhPG0XKMkrB2URTiy4Z5G2kOzEgh3J59jd/jD+EIYKvyFn5Pwe8I+UBOLCnOx7DneMbvomxiQq9sr8/gwmalYz8NL8odl2UCk5Z5i4zjqiWCXfPPW7QXsYlNRLAAeOhhchAOaj4R0VxiVoSE3vppD8pKT2/GkJRLJzYQpGE217Ox4GTZ6JSX7OXbFjset6GfLm4EzMCgoIXkopdri9rHLMRWzWDtYHWPBJL6Za84X2AfVG/8xQU9ME4ncvMPPMogbmbURNWj5tMtKVPmWJzDkpA0A7CYrpcwoQDjJPafCHaChnVBISCABdXLW8axyNsq0NJpFiZ0ZR1jYZXJyL5d8aHs+mlS8EnzpFN1phH6WpULnsSMuDJ4xRU9KZSpSmx9GGfUDKx5ABvbBNsCQiZK6IqwOonH+td2JLsfWw4GNcUYqVsn8Hu8c5KpgwJbqJcAuAeD8WzijWDBn+KMof8AMKA7Uj2QqTujIF/lB+0k+oR3ryIRVWYPFJuwK6FTANEzZWzFzFDrYU3c8tRBYvdmmGc5R7VfdCZUinlebMyydQPtiZeQmtAsLT2R6NZlzihyEAWA9bQrauz01I81dn6wbO2jZZQifNp8ZmOpSiLhJLewDxiPP2qpJt0iQcrg274wvdo1r2YIbQ2WtCiACUuwMQ10iwHw24wWTp4Xmud3MMuyGKmWlQYqmkdoEbLN8kOAJFBjwYhk47DBH+D0cJn2oUKOTqiYT/F90P1kLiyJuzvBMp5ySpRMo2WM7Mw8I1+krEzpaVy1BSVBwRGXCRTayFH+ZXsUItdlbaRTgplS1JDuzqN+xSi0c+XjLaNY67DlYaG1KgUmb2rOST4RYUu8MhbBSloOrjq+I9sZcWVaLSbEYloeFTJVlOT4+8QzNoZaneoX3KA9IAIhDofkVHGPJ9QC4II+M4q6vZafo1k1HYR74gJ2YNdozy2TFJ9aTBQUMbd2YJ8mZTKspLzJCuCk+cH/AFb/AGVn9URmmzcSZqkqBbAtE1/ohSSk94JBHMRpNQtMlaVmomzcCsQxBOIkAhgAkaEuSwYmBSooulK2T0YW5sXuwHDhbliPGBq2mGgYn1WIgqSVKCQnM3KRhfIEZPE2VtCahSFplrGAv1lLIPa8dVbLmSVDE4Gqie5zEWfJLnq5HXM30EZyyu6YuSPakYiohhckDloBy07GiHKlKBI5dkTEhRVYjrZ38PRHomJCQMIcZnO/ujK2ibIyHNnv7e6FyADiBBxAWOg7u1vRCZSCSOq+dtP7xJ6MtkPOAA49/Z6oUmMhlKBqfAR0P/IDxT4x5ByXyHIYAYdYDxhuYBpHhW4YOYWRcAjnlp8CL6KGukLvDkgKJAzHCHhSkvbLUZQU+TClSqvklaXCTMNxZxLU3pPogTT0GiZu9uHUTwlS0FCDobFvZBxTboy0JCVLSG+iMvvPpgk2vtES5ZU7DHLSTwC5iUE9wUT3QRSamXgeZgAJYEkDmORceqOiMVH2FSA2XsGQnMEwP7S2CqWoqlElBy4jt4iNF2lsHG6pCwk/q5p+zp2iBmplzpSmUkpPik9isj2Zxapg1QKSadayEsYsZO7yzxi5p6ohQ6tz8FvdF0lQId4fQqsGJW7B1MTJe7KBmYuVKHP7J90MTJ/I+EFsfFDMjZElGjx1dRylgOgWyhK6nkfR74YmTydD6PfDoDk7Klfqwr8Gyv1fTDPTmEmoPwYfEND52ZK/VhlexpZOUeInKJAGZyvEqopJqACpmPAgwNUGmQ/wHLjvwDLh4KVCgtcIKQwjYcrhEap3dScos0LU7tD6Zp1Hqg5NBxTBaZu8oZExEn7GmcYO0kc49MpJ/tBzXuhcDOzsuYOMdKpFAEFLk68IO5sqWM4ROAAGBL8Tw7HzPo9UDcX0JRYHUW765hyYCxPPh8cYvk7sICQMy0TyVWGXBKbqPxxPfFxsvYk1d5isKP1QW8V59wYdsTfHZSjYH1OzpKDgmsxzSSLjsMVO3/JzKmDFRVCUrH6KZYHVgrTvDRpu0UUcpOBKJZmFwhBLYlcki6j8PGbbRr5ipWM5oqDKCk+apBQ4bUsUK+3A3DJ2iePFma1WxJ0mYZc1HRLSkuFp48NFA8RDS1qJYDTLu0MFu9m0FTZaAsn5skDWytOy0DdNS9YMHAuT6/XHDl/bJoGN06CAArPNnzIvk0Nzl3chrFm7yDE+5xG2SWBuDfPuzEQ61gTiNwQGIGT8IyjK2SmQ+nUcjbS7eiOiUKZRuCW0yjo05RK0XCqSXYhItfvh6XRIVe1ma2ojwOCHY/HpjnPA/HIRw8ZfJp6THhTACwFoudykf/1ygzOV9vmKijM3meHi0W+7U8JqZBZvnBnncNfxisUZKaf2L0mtmhb0UHSUc9IDnASOJKCFgd+GIG5m9SJ8sSpv52WBa3XSBZYs2JlFxyUcsiUTQRGcbd3UXLm9JJK0oxOlSHKpd3IIFynNjpq2vsgaL+EFAvLWZahmhuofYLNFhK2ulScFVLF9QHEAOytszAtCSlE6WEuVAsoKdQbCl0EMMiBF3L2wFYlJVliDKWAxDh8Kk3ZjrEKn7jstdp7voCTNlLeXmbuUpGZB1A1Gdu6I6JWAM9xkeMLlzjKoluetUKKE2ALEHGu1rJxF+Qim3j3pl09NMnABSkDqJ4qJCUvyc37ItSfTFXwWE4zdAw4m0RVS16qSO+MP2nvDWzlFU2qmknMCYUp7kAgADLKKepUo+cpR7VP6zD5/QcT6BmTEjzpssdpERpm0qdPnVMofzp98YBhEdgHx/eF6jHxN2Vt+iGdXJ+2n3w2veagH/NSvF4w3D8e2PWhepIOKNrVvbs8f8wjwV7oZXvxRg9WeCOLK90AtHu1LlS0TKtMxa5iQpMhDpwoPmqmzGJTiFwhIdmJIeJ+2NjUqESD8jUBPk9IFyZkwqT85MSOrMxJUMKAWOHM3EWuTFSCxO+9L+3T6fdDqd9Kb9vL+0IyHa+yzIUGVjQsPLmAEBQBYgg+aoGxTp3iIDRPJ/A6Nyl74SDlOln+dPviQjeiUcloP8wjBW+PgxzdkHP6Cj6DRt9B4dxiRL2wg8Y+dAOETZU5YymLGtlke2DkvgKZvlZVpCCs3Ggjtjz5lScFOEuzqJ81AdnOpc5DW/Axku722Zyl/J5kwrCwcBJcpWkYs9QR7I0byd7UMirSldkTU9Grkp3lnxcfzwm9C9wyWqloBimLM2ce8k8OA7BlFNVbzzZ6inFgA81CUkuDz1inr6ZSaifTmWqaUEr8/oglyADjvixOHDc4cRVdHTdIJYCusMOIqV1S3npYB+cGv5FYnbRmJSJyCpUyWFqSmwwqXLXLDJFyQVhV9EmBSrqymRJpyQ8vrLZrLU7JJGZSki/70W+8W0ZhXgpJoUkHrKQAb6krFh64Gl0pSGzzJPEnMxS3sTPFyxMdybN7Y8VRAi4YuHbXjEjZyS57vREwyXGl9DHj+ZkaytA7ZSp2cAsEEg5WyPbEabsWWS9z237IuZ8nKxzhqYm7DnHOssl0zNtpkJFDLAt7ffHRJwL0VHQ+UvkvjIjLDDMvnDglqKS3Hu7YeCEFvjshaUJbLSLeRHR6iZH+TKYkF+J9kSaROBaZjMAXfnhJHpaPUXDkkNo/KG6pbIeyXe5/hPONMU25r8icrNC2ftXE14IqZLhzGWbOr2Yvwi6255QE00lIQkKmHj5oAysLkm9nGV49czQc1mx5axiXLSrmUgnxziqn7DlkEBUxIILgLJsc7LxDU5RnKfLDWGxEsjhgH9T+mJ1J5VH/OSR2pJHrB9cK/kKCvbSFS5AAUpWBGBDt1UcAEgC5Acm5YRn9dMM6XMlvdSS38QIUn0gDvgtG/FHPQUqxJfkFf6ST6ICq6YkLJlqcPYj74HQkQaamolIBXUV0tRS5anlzE384giaCzjNhCjsqg/wAQqRlnQ+GU6G6iSVOuXrdSQASDqcOqSb64bxFxK0OLIWAU5zDEJIURxytBRVk78EUH+KTRrehV/uQk7H2f/iyu+imf1RV/LFi7pzzYNi4hyH0BJyjk1ytAk6AB+8WVaxz1hDLT8CUB/wDmE99LNEK/A+z0FCjtAVDzEdREpabYwVPizBDjMMTFYnaB/USdfpjqi2Lkl84i1iwtLGWEnNwTYm93GR0+DABosyfNqayolIHWRMWJiiGQgBZAKpmSU2tqdBpFnvMuXUS5KaWcJhppXRzAjNTJS6kpF1XxWzvkYCKjaEyvloQJ4RNTaZJWsS0TVAMJoUWStZAAIWX4WtEeTunWS1BczBTJH6WZOQgJ5jCoqVyCQSYfJoVEmsTKmUCiVkJFZLCVFJBClSppmDUsyZT9giGjYlE3W2qgHgJExXptCd6tuInmXJlkrlSnKpik4FT5ygkLnKSMrJSlIN2TcuTFUmsbKWPT8Nxgu+w6Lf8ABFB/inhSTD7YSdl0Om0ln/6i/wCqKk1h4D05eN3hPytX7vxkM8hxhqgCCj3dp5qVKRXkhJ62KSlHoXMD9zwmq2NTSmxVkxTv+bloXlm+GaW74okLKjdn7NeJt4RJppClnCkO3YABxUbYRzir+hFnsqSgTDMlqmqShBvMSlHXmDCGCVK+hiOeggh2HVKMxjcNFEFBCRLSXuSo5YlnMtw0HIczFtsmukyQVTFX4fFojtgwprpy5izMXOmFRSlJIIDhOTkJcnnmYiikSovhxnislZ/zO0D1XvjJB6oKvjk/rivmb+zB5iQO73xryhHohKTDSumGWnrBuHCKqy4oUb7TJ/zc5mORwgF+RDRdbTXLlAdGpwoA+IiHKyqE0+Ezujf6D97xYCXxzZgIGdiTsVUXfzNPH2wWS28PdzjwvP8A7oMr58u2vP2wxTy2Lqc2+/1RaTQTm55Bn+PdEcJ1ZnsA8cyZLVkXopepIPCOib0PBPjHRfJj2VSJILu/sh5KQGtr6LtEjouGXGHQjDmX7n9PfEOYkyH0JJDZD0xD20ClA4YvSyvRF8nuHPWKXecFEtBN+vp/CY38aV5UUnsi7PnEpBB0IfxSfbAzvHNJmtwH3eyLnY07zgTcK9f9jFJvAn5480v6THtl0IlU4aHPkkOyCGzHx6YkoI4wxEA0xGRiyoZE1SXKSU6KiRR0KpqgkWvc8A/xnGzbtbKQJQQUhmGmTQ6CzFyhY0IaFGqUfOAV/EkKPiQ/pjXd510FInFUYEv5qWdauxIue3KM02lvlQqJ6OjX2lQT6A8Kl8hZWiYnMykd2JPqVFhsfYHyoqTJkKVgT1mmpSAFEsOuNb2EVK95JLuKbI5FTjvDXEaB5Hq8TptWpKMHVllhldSzYaCBDKZfk4nn9AsZfTknL+YffHg8nFR+yWz3Dyh3Wm5RrO36yZJkqXKlKnTMkISkm51LZJGfo1gZotqbULdJIALXaURcsbdZgALO7FSv1UKJoQD1HkyqVZS78VTEv6Cr2xF/JdWA/m0f+Ue4Rp6q+uKwlMk4QHWvABn5qUiYtL6knQYRniaOut2h0mASwB0kkBS5VglSZpmEmWshgUyw4NsWV4f8CAFPk4qALyT3TEG/Hzx8COPk2n/syO+V/uG0aRWVVa8spkoSnGEzEgmaogpUSoEMEIBAuQScQsnWvRtGs6FCiiaZplgrQKdSWXhBKUkpUFXcOSBD0AGI8nE4foie2bL9xgeXSSkkp6O4LEFRNwW0IjfKdylJIYkBwdCwcRgVbt1CZsxJkAkTV3cPZRGbOByhSBHowjKUj7L/AOp49mTlkNpwFh4C0Jl7zyk+dTE/z/dF3s3eqiWcKpRlE6qun7Qy7xEpX7jv6B9ciYR1UkmKebJViOLONanU4KCUJHm2I4cecZ3tiUUruNbxThQlKysTSx78mHD4+OMSUzRx+PV4R50ieI8efxnEUMq6hOE2gnxkgF8wD6IHa5ntw98EQ6qA+iR6BEsHsVust63hZV+wfdBqqUciT4xn+6Knq0XYkLz44TGjKDPdwdY8j/0F/UX4JfY1MQgjqi+pP3Q3KQHIPjyGULWWBzsNOJhmQg6vk7+sxwoLQ2QrRTco6Ji5ofh90dBQtFdiVxb4MKCMs87xZy9nK1yhwUSmyHp8Y6f0+T/UXpsr0ZPlyih31Weil6dfxtl8cIMUUq79UHvgX8okoplSgRbpOH7pjXx8E45E3EpRoDtm1GCZwCgx8bfHOC2k2JTVeArmpRMRiBQpYl40m6SlZsVAuMNnfMNAKsZ9nviWiqOEdYZZK98eumWHR3PQnJFQObBYbtlrVaGDsOSnOZMT2yZ3+3ASnaRTlb+FTQ8neGcMps4f91Xvi+f0KjRtjJo5Jcz/AP8AKb/txY7x+UpMhHRUMtS5rfnFoUEp7EEBS1doAvrGZ0O2qqctMmXOnY1nCn51WZ1zyi0n7hV6i6lpU+ZMwk+kZwnKwUQXr11E+YqbOMxa1FypeZ8chyyEMfJFcD6PfBUnyd1WqR9tMOq8nNQNE/bHuiSgRFKrgfj1QR7obzT9nGYqVLQrpAkKCwr6JLNhP7xj2p3FqEFuiUq2aFJPdpDB3Mqfq830e+GhBT+V+s+rSPCZ748/K9WfVpHhM98DcjcepU/zKwwfrFKX5B8zDJ3Oqf2E7uAMFhQU/ldrPq0nwme+EK8rdZ9Xk+C/6oGBuhUn9BO+z90LqNyatLfMrLgHq4Sz6FsjygsKCE+Vqs/YSPsr/qhtXlZrf2VOP5V/1wOfijVfV532Yfk7j1asXzCxhDsSkE8gHuYOVe4UXQ8rNd+zp/8Axr/rgHqJpUtSzmpRUbMHUXNu8xcnc+q+rzfAe+HUbk1Z/wCWm95SP/aE5L5Cga6Mx3RmDBXk9qhmhP2xDSdwqk5S+8LDemI9SHyFkbdXb8+mOEEKl6y1u38qrhB7bQS7YqqKoSFOuWoi4MtSr/xIBSe6Bra251RTy1TVgBKWdi5uQHyyuIpaeuWjzVrHFlEeoxpDKmtbFVlyvZUp+rMUf+1M/ohSdhA5dKeyWof6sIioVtWYf0i/tK98NqrVHNRPaTFcwoIE7vSksqYsISCCUqUnGQDdIQkqLnLTOIu3K8KKsNgolhwTFVLX++BDa1uSbm+ucJuwLzcz/jJfYv8A0GNKSvOzjx/tGabmAfLEPlhW/wBkxpfShvOce2PG89P1F+CZLYiat8/AatlDE1bWSM/7kfHGHJsxN7/dDRUlgx8c+ccaQtDqKu2vj98dEREqWBm/fHRVAXiZh4wpE0vEaZPByLl274WJuhzzbWPe5I2JQnGBDyluqRLOiZl+9NoJ3ew+OcIn0qJiShYdJDEEWMMDFJis+yGyfNjXFbn0R/RAXyc5eOcJ/Eijduj9J98FpCoyNWsXewtmSZkpS5uJ8TAAtZhy4kxoCdxKMmySbcT745O41K1sYzcAm2XNtYXJMKAqnkokTAuSpaFhwkuCQ9izjPMQ9N3mqchVTNdR4ZQYDcOlId1H+YlvTDadwKVgylvxfTPLieyE5IdARM3qrMvlU3xHuho72Vv1qb4/dByvye05H5xYOZsDbh2w2vybyf2qvAW7YFJMKYDHeut+szftQg701n1mb9qDoeTWT+2V9n74R+TeSTaervT6c8oq0KmAx3nrPrM37ZhJ3lrPrM37Zg8V5MZf7c/Y++EnyZI/b/5fvgtDpgH+MVX9ZnfbV7478Yqv6zN+2ffB7+S9P7f/AC/fCVeTC7Ca/wDK3th2hbAP8Yar6xN+2ffHv4xVf1mb9s++D0+S7/q+j7478lv/AFfR98Gg2AX4xVf1md9tXvjht+q+sTvtq98H35LR+1/ywoeSwftf8v3waDYBDeGq+sTftmPRvFVO/wApmv8AxF4PB5L03+cy/d++PfyXJ/af5fvg0ACTd4KlaShdRMUkggpJcEGxDRXplp1jTR5L0azD4ffHv5M5f658PvgtAZsunl4SQS4FrxCEasPJpK/XPhCh5NZP6xgsDKeEegxqw8nEjiYUPJ5TuzHxgsKAbcwH5RjH0UH02g6+UmJVHunLlBkOHzbKJQ2KOMGgoqvlJ+Lxxnk8Xi0VsiEDZgGsFRArTMPwTHsTzs5PEeEewv2hRDppuEuMw+fE2du8xKkJTjcC6nzyBcj1iOjo8RGgrpnzN9OR9oj1M44Rq5c6NkGDx0dFc5L3BEyVNW+htbtyPpPohExZHnZ3Fu4+yOjoJzl1YMc6QtYszX7L5a2h0VALDO1+Ze9tMo6OjJ5ZLpkNj0qexwgDIwnpAdD8C8dHRUckvkE2OSFBx1jYQ4meC4048e6Ojot55pqmVY5b+0ISBhfl6bR0dCl5WS+wGpVQCSCPSfCHyvDHkdDj5GRq7JTFJmuzZtHqlMW5eyPI6Kj5OSrsYuonhKgL39bR4JjjMx0dFLyZuxnqai1+/wCO+HE1Hx4+6PI6GvImI8+VfHohS6i3c9o6Oh/qZr/gmNJrHAvm3phZnsfGOjoIeTOS2M8mVUNqqn5R5HR2qboDvlXARGRXEklh8PHR0Dk7AdVOIv6oQubdm4DxvHkdA5MYifNbuz5wxic5XEdHQ1JiYlBtlHsdHRVgf//Z"
+			},
+			"expected_result": {
+				"data/PhotoID": "soft_validation/Number",
+				"status/message": "Success."
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "delete_vehicle_photo",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/delete_vehicle_photo",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_photo_id": "388567"
+			},
+			"expected_result": {
+				"data/IsDeletePhoto": "soft_validation/Boolean",
+				"status/message": "Success."
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "save_user_profile",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/save_user_profile",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_vehicle_id": "184210",
+				"sonic_wui_invtr_id": "1",
+				"sonic_wui_store_id": "2019",
+				"sonic_wui_first_name": "Lingaraj",
+				"sonic_wui_last_name": "Mahanta",
+				"sonic_wui_email_id": "",
+				"sonic_wui_phone": "1234509899"
+			},
+			"expected_result": {
+				"data/IsUpdateCustomerStatus": "soft_validation/Boolean",
+				"status/code": "200",
+				"status/message": "Success."
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_carcash_appraisal_response",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/get_carcash_appraisal_response",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_vehicle_id": "183864"
+			},
+			"expected_result": {
+				"status/code": "200"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "update_vehicle_status",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/update_vehicle_status",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_vehicle_id": "183864",
+				"sonic_wui_invtr_id": "1",
+				"sonic_wui_store_id": "2019",
+				"sonic_wui_user_name": "SonicOnlineSalesApp"
+			},
+			"expected_result": {
+				"data/IsUpdateStatus": "soft_validation/Boolean",
+				"status/message": "Success."
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_rtc_timings",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/get_rtc_timings",
+			"requestType": "POST",
+			"Body": {
+				"IsRTCUp": "false",
+				"UpTillMinutes": null,
+				"NextAvailableTime": "2019-10-02T13:00:00",
+				"RTCTimeZone": "Eastern Standard Time"
+			},
+			"expected_result": {
+				"data/IsRTCUp": "soft_validation/Boolean",
+				"status/code": "200"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_KBB_makes",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/get_KBB_makes",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_store_id": "2019",
+				"sonic_wui_vin": "2C3CCAEG1HH590916",
+				"sonic_wui_new_vehicle": "false",
+				"sonic_wui_mileage": "10000",
+				"sonic_wui_year_id": "2010",
+				"sonic_wui_year_value": "2010",
+				"sonic_wui_year_selected": "false"
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_KBB_models",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/get_KBB_models",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_store_id": "2019",
+				"sonic_wui_vin": "2C3CCAEG1HH590916",
+				"sonic_wui_new_vehicle": "false",
+				"sonic_wui_uvc": "",
+				"sonic_wui_mileage": "10000",
+				"sonic_wui_year_id": "2010",
+				"sonic_wui_year_value": "2010",
+				"sonic_wui_year_selected": "false",
+				"sonic_wui_year_code": "",
+				"sonic_wui_make_id": "5",
+				"sonic_wui_make_value": "BMW",
+				"sonic_wui_make_selected": "false",
+				"sonic_wui_make_code": "",
+				"sonic_wui_engine": "",
+				"sonic_wui_model": "",
+				"sonic_wui_model_code": "",
+				"sonic_wui_body_style": "",
+				"sonic_wui_Series": "",
+				"sonic_wui_transmission": "",
+				"sonic_wui_drive_train": "",
+				"sonic_wui_class_of_vehicle": "",
+				"sonic_wui_decode_status": "",
+				"sonic_wui_dmv_class": "",
+				"sonic_wui_exterior_color": "",
+				"sonic_wui_interior_color": "",
+				"sonic_wui_interior_type": "",
+				"sonic_wui_fuel": "",
+				"sonic_wui_vehicle_type": "",
+				"sonic_wui_dmv_type": "",
+				"sonic_wui_options": "",
+				"sonic_wui_request_xml": ""
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_trim",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/get_trim",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_store_id": "2019",
+				"sonic_wui_vin": "2C3CCAEG1HH590916",
+				"sonic_wui_mileage": "10000",
+				"sonic_wui_year_id": "2010",
+				"sonic_wui_year_value": "2010",
+				"sonic_wui_year_selected": "false",
+				"sonic_wui_year_code": "",
+				"sonic_wui_make_id": "5",
+				"sonic_wui_make_value": "BMW",
+				"sonic_wui_make_selected": "false",
+				"sonic_wui_make_code": "",
+				"sonic_wui_model_id": "21",
+				"sonic_wui_model_value": "X5",
+				"sonic_wui_model_selected": "false",
+				"sonic_wui_model_code": ""
+			},
+			"expected_result": {
+				"data/Series[0]/ID": "soft_validation/NumberText",
+				"data/Series[0]/Value": "soft_validation/Text",
+				"data/Series[0]/Selected": "soft_validation/BooleanText",
+				"status": "success - 200 - Success."
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_engine_transmission_drive_train",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/get_engine_transmission_drive_train",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_store_id": "2019",
+				"sonic_wui_vin": "2C3CCAEG1HH590916",
+				"sonic_wui_new_vehicle": "false",
+				"sonic_wui_uvc": "",
+				"sonic_wui_mileage": "10000",
+				"sonic_wui_year_id": "2010",
+				"sonic_wui_year_value": "2010",
+				"sonic_wui_year_selected": "false",
+				"sonic_wui_year_code": "",
+				"sonic_wui_make_id": "5",
+				"sonic_wui_make_value": "BMW",
+				"sonic_wui_make_selected": "false",
+				"sonic_wui_make_code": "",
+				"sonic_wui_model_id": "21",
+				"sonic_wui_model_value": "X5",
+				"sonic_wui_model_selected": "false",
+				"sonic_wui_model_code": "",
+				"sonic_wui_engine": "",
+				"sonic_wui_model_code_2": "",
+				"sonic_wui_body_style": "",
+				"sonic_wui_series_id": "377596",
+				"sonic_wui_series_value": "xDrive30i Sport Utility 4D",
+				"sonic_wui_series_selected": "false",
+				"sonic_wui_transmission": "",
+				"sonic_wui_drive_train": "",
+				"sonic_wui_class_of_vehicle": "",
+				"sonic_wui_decode_status": "",
+				"sonic_wui_dmv_class": "",
+				"sonic_wui_exterior_color": "",
+				"sonic_wui_interior_color": "",
+				"sonic_wui_interior_type": "",
+				"sonic_wui_fuel": "",
+				"sonic_wui_vehicle_type": "",
+				"sonic_wui_dmv_type": "",
+				"sonic_wui_options": "",
+				"sonic_wui_request_xml": ""
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_factory_options_kbb",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/get_factory_options_kbb",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_store_id": "2019",
+				"sonic_wui_vin": "",
+				"sonic_wui_new_vehicle": "false",
+				"sonic_wui_uvc": "",
+				"sonic_wui_mileage": "0",
+				"sonic_wui_year_id": "2010",
+				"sonic_wui_year_value": "2010",
+				"sonic_wui_year_selected": "false",
+				"sonic_wui_year_code": "",
+				"sonic_wui_make_id": "5",
+				"sonic_wui_make_value": "BMW",
+				"sonic_wui_make_selected": "false",
+				"sonic_wui_make_code": "",
+				"sonic_wui_model_id": "21",
+				"sonic_wui_model_value": "X5",
+				"sonic_wui_model_selected": "false",
+				"sonic_wui_model_code": "",
+				"sonic_wui_engine": "",
+				"sonic_wui_engine_id": "4915506",
+				"sonic_wui_engine_value": "6-Cyl, 3.0 Liter",
+				"sonic_wui_engine_selected": "false",
+				"sonic_wui_engine_code": "",
+				"sonic_wui_model_code_2": "",
+				"sonic_wui_body_style": "",
+				"sonic_wui_Series": "",
+				"sonic_wui_series_id": "377596",
+				"sonic_wui_series_value": "xDrive30i Sport Utility 4D",
+				"sonic_wui_series_selected": "false",
+				"sonic_wui_series_code": "",
+				"sonic_wui_transmission": "",
+				"sonic_wui_transmission_id": "4915527",
+				"sonic_wui_transmission_value": "Auto, 6-Spd Steptronic",
+				"sonic_wui_transmission_selected": "false",
+				"sonic_wui_transmission_code": "",
+				"sonic_wui_drive_train": "",
+				"sonic_wui_drive_train_id": "4915533",
+				"sonic_wui_drive_train_value": "AWD",
+				"sonic_wui_drive_train_selected": "false",
+				"sonic_wui_drive_train_code": "",
+				"sonic_wui_class_of_vehicle": "",
+				"sonic_wui_decode_status": "",
+				"sonic_wui_dmv_class": "",
+				"sonic_wui_exterior_color": "",
+				"sonic_wui_interior_type": "",
+				"sonic_wui_interior_color": "",
+				"sonic_wui_fuel": "",
+				"sonic_wui_vehicle_type": "",
+				"sonic_wui_dmv_type": "",
+				"sonic_wui_options": "",
+				"sonic_wui_request_xml": ""
+			},
+			"expected_result": {
+				"data/StandardOptions[0]/optionId": "soft_validation/NumberText",
+				"data/StandardOptions[0]/displayName": "soft_validation/Text",
+				"data/StandardOptions[0]/isSelected": "soft_validation/BooleanText",
+				"data/StandardOptions[0]/isStandardOption": "soft_validation/BooleanText",
+				"data/AdditionalOptions[0]/optionId": "soft_validation/NumberText",
+				"data/AdditionalOptions[0]/displayName": "soft_validation/Text",
+				"data/AdditionalOptions[0]/isSelected": "soft_validation/BooleanText",
+				"data/AdditionalOptions[0]/isStandardOption": "soft_validation/BooleanText"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "save_factory_options_kbb",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/save_factory_options_kbb",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_store_id": "2019",
+				"sonic_wui_vin": "",
+				"sonic_wui_new_vehicle": "false",
+				"sonic_wui_uvc": "",
+				"sonic_wui_mileage": "0",
+				"sonic_wui_year_id": "2010",
+				"sonic_wui_year_value": "2010",
+				"sonic_wui_year_selected": "false",
+				"sonic_wui_year_code": "",
+				"sonic_wui_make_id": "5",
+				"sonic_wui_make_value": "BMW",
+				"sonic_wui_make_selected": "false",
+				"sonic_wui_make_code": "",
+				"sonic_wui_model_id": "21",
+				"sonic_wui_model_value": "X5",
+				"sonic_wui_model_selected": "false",
+				"sonic_wui_model_code": "",
+				"sonic_wui_engine": "",
+				"sonic_wui_engine_id": "4915506",
+				"sonic_wui_engine_value": "6-Cyl, 3.0 Liter",
+				"sonic_wui_engine_selected": "false",
+				"sonic_wui_engine_code": "",
+				"sonic_wui_model_code_2": "",
+				"sonic_wui_body_style": "",
+				"sonic_wui_Series": "",
+				"sonic_wui_series_id": "377596",
+				"sonic_wui_series_value": "xDrive30i Sport Utility 4D",
+				"sonic_wui_series_selected": "false",
+				"sonic_wui_series_code": "",
+				"sonic_wui_transmission": "",
+				"sonic_wui_transmission_id": "4915527",
+				"sonic_wui_transmission_value": "Auto, 6-Spd Steptronic",
+				"sonic_wui_transmission_selected": "false",
+				"sonic_wui_transmission_code": "",
+				"sonic_wui_drive_train": "",
+				"sonic_wui_drive_train_id": "4915533",
+				"sonic_wui_drive_train_value": "AWD",
+				"sonic_wui_drive_train_selected": "false",
+				"sonic_wui_drive_train_code": "",
+				"sonic_wui_class_of_vehicle": "",
+				"sonic_wui_decode_status": "",
+				"sonic_wui_dmv_class": "",
+				"sonic_wui_exterior_color": "",
+				"sonic_wui_interior_type": "",
+				"sonic_wui_interior_color": "",
+				"sonic_wui_fuel": "",
+				"sonic_wui_vehicle_type": "",
+				"sonic_wui_dmv_type": "",
+				"sonic_wui_options": "",
+				"sonic_wui_request_xml": ""
+			},
+			"expected_result": {
+				"data/IsSaveFactoryOptionsKBB": "soft_validation/BooleanText",
+				"status": "success - 200 - Success."
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_aftermarket_questions_sonic",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/get_aftermarket_questions_sonic",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_vehicle_id": "86133",
+				"sonic_wui_inventory_id": "1",
+				"sonic_wui_store_id": "2019"
+			},
+			"expected_result": {
+				"data[0]/AfterMarketOptionId": "soft_validation/NumberText",
+				"data[0]/Description": "soft_validation/Text",
+				"data[0]/OptionKindId": "soft_validation/Text",
+				"data[0]/Is_AfterMarketOption_Select": "soft_validation/BooleanText",
+				"data[1]/AfterMarketOptionId": "soft_validation/NumberText",
+				"data[1]/Description": "soft_validation/Text",
+				"data[1]/OptionKindId": "soft_validation/Text",
+				"data[1]/Is_AfterMarketOption_Select": "soft_validation/BooleanText",
+				"data[2]/AfterMarketOptionId": "soft_validation/NumberText",
+				"data[2]/Description": "soft_validation/Text",
+				"data[2]/OptionKindId": "soft_validation/Text",
+				"data[2]/Is_AfterMarketOption_Select": "soft_validation/BooleanText",
+				"status": "success - 200 - Success."
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_appraisal_status",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/tradeIn/get_appraisal_status",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_user_id": "lio",
+				"sonic_wui_vin": "2C3CCAEG1HT590916",
+				"sonic_wui_mileage": 10000
+			},
+			"expected_result": {
+				"data/appraisalState": "soft_validation/Text",
+				"status": "success"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_product_type",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/products/get_product_type",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_make": "Audi"
+			},
+			"expected_result": {
+				"status": "success"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "save_user_product",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/products/save_user_product",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_tran_id": "111",
+				"sonic_wui_make": "Audi",
+				"product": [
+					{
+						"sonic_wui_product_name": "ServiceContract",
+						"sonic_wui_product_term": "",
+						"sonic_wui_product_price": "599"
+					},
+					{
+						"sonic_wui_product_name": "PermaPlate",
+						"sonic_wui_product_term": "3 years",
+						"sonic_wui_product_price": "199"
+					},
+					{
+						"sonic_wui_product_name": "GapPrice",
+						"sonic_wui_product_term": "60 months",
+						"sonic_wui_product_price": "99"
+					}
+				]
+			},
+			"expected_result": {
+				"data/sonic_wui_tran_id": "12121212",
+				"data/sonic_wui_make": "BMW",
+				"data/product/[0]/sonic_wui_product_name": "Vehicle Service Contract",
+				"data/product/[0]/sonic_wui_product_term": "",
+				"data/product/[0]/sonic_wui_product_price": "2989",
+				"data/product/[1]/sonic_wui_product_name": "Gap Insurance",
+				"data/product/[1]/sonic_wui_product_term": "0-60 months",
+				"data/product/[1]/sonic_wui_product_price": "595",
+				"data/product/[2]/sonic_wui_product_name": "PermaPlate",
+				"data/product/[2]/sonic_wui_product_term": "3 years",
+				"data/product/[2]/sonic_wui_product_price": "549",
+				"status": "success"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_products_details_for_financing",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/products/get_products_details_for_financing",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_tran_id": "111"
+			},
+			"expected_result": {
+				"data/sonic_wui_tran_id": "12121212",
+				"data/sonic_wui_price_list/[0]": "2989",
+				"data/sonic_wui_price_list/[1]": "599",
+				"data/sonic_wui_price_list/[2]": "549",
+				"status": "success"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "save_product_type_details",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/products/save_product_type_details",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_product_type_details_list": [
+					{
+						"sonic_wui_product_type": "D",
+						"sonic_wui_product_name": "ServiceContract",
+						"sonic_wui_product_url": "http://www.a.com",
+						"sonic_wui_product_text": "Hello!!",
+						"sonic_wui_product_term": "",
+						"sonic_wui_product_price": "2989"
+					},
+					{
+						"sonic_wui_product_type": "D",
+						"sonic_wui_product_name": "PermaPlate",
+						"sonic_wui_product_url": "http://www.a1.com",
+						"sonic_wui_product_text": "Hello!!",
+						"sonic_wui_product_term": "3 years",
+						"sonic_wui_product_price": "399"
+					},
+					{
+						"sonic_wui_product_type": "D",
+						"sonic_wui_product_name": "PermaPlate",
+						"sonic_wui_product_url": "http://www.a1.com",
+						"sonic_wui_product_text": "Hello!!",
+						"sonic_wui_product_term": "5 years",
+						"sonic_wui_product_price": "499"
+					},
+					{
+						"sonic_wui_product_type": "D",
+						"sonic_wui_product_name": "PermaPlate",
+						"sonic_wui_product_url": "http://www.a1.com",
+						"sonic_wui_product_text": "Hello!!",
+						"sonic_wui_product_term": "7 years",
+						"sonic_wui_product_price": "549"
+					},
+					{
+						"sonic_wui_product_type": "D",
+						"sonic_wui_product_name": "GapPrice",
+						"sonic_wui_product_url": "http://www.a2.com",
+						"sonic_wui_product_text": "Hello!!",
+						"sonic_wui_product_term": "0-60 months",
+						"sonic_wui_product_price": "595"
+					},
+					{
+						"sonic_wui_product_type": "D",
+						"sonic_wui_product_name": "GapPrice",
+						"sonic_wui_product_url": "http://www.a2.com",
+						"sonic_wui_product_text": "Hello!!",
+						"sonic_wui_product_term": "61-72 months",
+						"sonic_wui_product_price": "695"
+					},
+					{
+						"sonic_wui_product_type": "D",
+						"sonic_wui_product_name": "GapPrice",
+						"sonic_wui_product_url": "http://www.a2.com",
+						"sonic_wui_product_text": "Hello!!",
+						"sonic_wui_product_term": "73+ months",
+						"sonic_wui_product_price": "795"
+					},
+					{
+						"sonic_wui_product_type": "I",
+						"sonic_wui_product_name": "ServiceContract",
+						"sonic_wui_product_url": "http://www.a.com",
+						"sonic_wui_product_text": "Hello!!",
+						"sonic_wui_product_term": "",
+						"sonic_wui_product_price": "3189"
+					},
+					{
+						"sonic_wui_product_type": "I",
+						"sonic_wui_product_name": "PermaPlate",
+						"sonic_wui_product_url": "http://www.a1.com",
+						"sonic_wui_product_text": "Hello!!",
+						"sonic_wui_product_term": "3 years",
+						"sonic_wui_product_price": "399"
+					},
+					{
+						"sonic_wui_product_type": "I",
+						"sonic_wui_product_name": "PermaPlate",
+						"sonic_wui_product_url": "http://www.a1.com",
+						"sonic_wui_product_text": "Hello!!",
+						"sonic_wui_product_term": "5 years",
+						"sonic_wui_product_price": "499"
+					},
+					{
+						"sonic_wui_product_type": "I",
+						"sonic_wui_product_name": "PermaPlate",
+						"sonic_wui_product_url": "http://www.a1.com",
+						"sonic_wui_product_text": "Hello!!",
+						"sonic_wui_product_term": "7 years",
+						"sonic_wui_product_price": "549"
+					},
+					{
+						"sonic_wui_product_type": "I",
+						"sonic_wui_product_name": "GapPrice",
+						"sonic_wui_product_url": "http://www.a2.com",
+						"sonic_wui_product_text": "Hello!!",
+						"sonic_wui_product_term": "0-60 months",
+						"sonic_wui_product_price": "595"
+					},
+					{
+						"sonic_wui_product_type": "I",
+						"sonic_wui_product_name": "GapPrice",
+						"sonic_wui_product_url": "http://www.a2.com",
+						"sonic_wui_product_text": "Hello!!",
+						"sonic_wui_product_term": "61-72 months",
+						"sonic_wui_product_price": "695"
+					},
+					{
+						"sonic_wui_product_type": "I",
+						"sonic_wui_product_name": "GapPrice",
+						"sonic_wui_product_url": "http://www.a2.com",
+						"sonic_wui_product_text": "Hello!!",
+						"sonic_wui_product_term": "73+ months",
+						"sonic_wui_product_price": "795"
+					},
+					{
+						"sonic_wui_product_type": "L",
+						"sonic_wui_product_name": "ServiceContract",
+						"sonic_wui_product_url": "http://www.a.com",
+						"sonic_wui_product_text": "Hello!!",
+						"sonic_wui_product_term": "",
+						"sonic_wui_product_price": "3489"
+					},
+					{
+						"sonic_wui_product_type": "L",
+						"sonic_wui_product_name": "PermaPlate",
+						"sonic_wui_product_url": "http://www.a1.com",
+						"sonic_wui_product_text": "Hello!!",
+						"sonic_wui_product_term": "3 years",
+						"sonic_wui_product_price": "399"
+					},
+					{
+						"sonic_wui_product_type": "L",
+						"sonic_wui_product_name": "PermaPlate",
+						"sonic_wui_product_url": "http://www.a1.com",
+						"sonic_wui_product_text": "Hello!!",
+						"sonic_wui_product_term": "5 years",
+						"sonic_wui_product_price": "499"
+					},
+					{
+						"sonic_wui_product_type": "L",
+						"sonic_wui_product_name": "PermaPlate",
+						"sonic_wui_product_url": "http://www.a1.com",
+						"sonic_wui_product_text": "Hello!!",
+						"sonic_wui_product_term": "7 years",
+						"sonic_wui_product_price": "549"
+					},
+					{
+						"sonic_wui_product_type": "L",
+						"sonic_wui_product_name": "GapPrice",
+						"sonic_wui_product_url": "http://www.a2.com",
+						"sonic_wui_product_text": "Hello!!",
+						"sonic_wui_product_term": "0-60 months",
+						"sonic_wui_product_price": "595"
+					},
+					{
+						"sonic_wui_product_type": "L",
+						"sonic_wui_product_name": "GapPrice",
+						"sonic_wui_product_url": "http://www.a2.com",
+						"sonic_wui_product_text": "Hello!!",
+						"sonic_wui_product_term": "61-72 months",
+						"sonic_wui_product_price": "695"
+					},
+					{
+						"sonic_wui_product_type": "L",
+						"sonic_wui_product_name": "GapPrice",
+						"sonic_wui_product_url": "http://www.a2.com",
+						"sonic_wui_product_text": "Hello!!",
+						"sonic_wui_product_term": "73+ months",
+						"sonic_wui_product_price": "795"
+					}
+				]
+			},
+			"expected_result": {
+				"status": "success"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_product_for_user",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/products/get_product_for_user",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_tran_id": "111"
+			},
+			"expected_result": {
+				"data[0]/sonic_wui_product_price": "soft_validation/Number"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "user_purchase_options",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/purchasePersonal/user_purchase_options",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_tran_id": "111",
+				"sonic_wui_financing_choice": "C"
+			},
+			"expected_result": {
+				"data/sonic_wui_tran_id": "12121212",
+				"data/sonic_wui_financing_choice": "C",
+				"status": "success"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "proceed_with_cash_or_single_application",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/purchasePersonal/proceed_with_cash_or_single_application",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_tran_id": "111",
+				"sonic_wui_date_of_birth": "01/01/1990",
+				"sonic_wui_address": "Street Name",
+				"sonic_wui_address_2": "State name",
+				"sonic_wui_city": "City name",
+				"sonic_wui_state": "state1",
+				"sonic_wui_zipcode": "11111",
+				"sonic_wui_ownership": "O",
+				"sonic_wui_monthly_payment": "25",
+				"sonic_wui_moved_in_month": "01",
+				"sonic_wui_moved_in_year": "01",
+				"sonic_wui_employe_type": "F",
+				"sonic_wui_employer": "Affine",
+				"sonic_wui_employe_since_month": "01",
+				"sonic_wui_employe_since_year": "01",
+				"sonic_wui_job_title": "SSE",
+				"sonic_wui_annual_gross_income": "10000",
+				"sonic_wui_income_interval": "Weekly"
+			},
+			"expected_result": {
+				"status": "success"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "proceed_with_joint_application",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/purchasePersonal/proceed_with_joint_application",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_tran_id": "111",
+				"sonic_wui_date_of_birth": "01/01/1990",
+				"sonic_wui_address": "Street Name",
+				"sonic_wui_address_2": "State name",
+				"sonic_wui_city": "City name",
+				"sonic_wui_state": "state1",
+				"sonic_wui_zipcode": "11111",
+				"sonic_wui_ownership": "O",
+				"sonic_wui_monthly_payment": "25",
+				"sonic_wui_moved_in_month": "01",
+				"sonic_wui_moved_in_year": "01",
+				"sonic_wui_employe_type": "F",
+				"sonic_wui_employer": "Affine",
+				"sonic_wui_employe_since_month": "01",
+				"sonic_wui_employe_since_year": "01",
+				"sonic_wui_job_title": "SSE",
+				"sonic_wui_annual_gross_income": "10000",
+				"sonic_wui_income_interval": "Biweekly",
+				"sonic_wui_co_date_of_birth": "02/02/1989",
+				"sonic_wui_co_address": "Lives Here",
+				"sonic_wui_co_address_2": "Also Here",
+				"sonic_wui_co_city": "Velo City",
+				"sonic_wui_co_state": "Low State",
+				"sonic_wui_co_zipcode": "22222",
+				"sonic_wui_co_ownership": "R",
+				"sonic_wui_co_monthly_payment": "35.50",
+				"sonic_wui_co_moved_in_month": "07",
+				"sonic_wui_co_moved_in_year": "07",
+				"sonic_wui_co_employe_type": "P",
+				"sonic_wui_co_employer": "Profectus",
+				"sonic_wui_co_employe_since_month": "02",
+				"sonic_wui_co_employe_since_year": "02",
+				"sonic_wui_co_job_title": "TL",
+				"sonic_wui_co_annual_gross_income": "25000",
+				"sonic_wui_co_income_interval": "Monthly"
+			},
+			"expected_result": {
+				"status": "success"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_personal_details_for_user",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/purchasePersonal/get_personal_details_for_user",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_tran_id": "111"
+			},
+			"expected_result": {
+				"data/tran_id": "12121212",
+				"data/financing_choice": "J",
+				"data/date_of_birth": "12/12/2012",
+				"data/address": "Indiana Stores",
+				"data/address_2": "Fort Mill",
+				"data/city": "Houston",
+				"data/state": "TX",
+				"data/zip_code": "20920",
+				"data/ownership": "Owned",
+				"data/monthly_payment": "222.22",
+				"data/moved_in_year": "1",
+				"data/moved_in_month": "7",
+				"data/employe_type": "Full Time",
+				"data/employer": "Sonic",
+				"data/employe_since_year": "1",
+				"data/employe_since_month": "3",
+				"data/job_title": "Junior",
+				"data/annual_gross_income": "101010",
+				"data/income_interval": "Biweekly",
+				"data/co_date_of_birth": "12/12/2012",
+				"data/co_address": "Indiana Stores",
+				"data/co_address_2": "Fort Mill",
+				"data/co_city": "Houston",
+				"data/co_state": "TX",
+				"data/co_zip_code": "20920",
+				"data/co_ownership": "Owned",
+				"data/co_monthly_payment": "222.22",
+				"data/co_moved_in_year": "1",
+				"data/co_moved_in_month": "7",
+				"data/co_employe_type": "Full Time",
+				"data/co_employer": "Sonic",
+				"data/co_employe_since_year": "1",
+				"data/co_employe_since_month": "3",
+				"data/co_job_title": "Junior",
+				"data/co_annual_gross_income": "101010",
+				"data/co_income_interval": "Biweekly",
+				"status": "success"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "save_details_for_financing",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/financing/save_details_for_financing",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_tran_id": 111,
+				"sonic_wui_our_price": "15000",
+				"sonic_wui_taxes_and_fees": "250",
+				"sonic_wui_product_price": "1000",
+				"sonic_wui_down_payment": "1500",
+				"sonic_wui_trade_in_amt": "1200",
+				"sonic_wui_financed_total_amt": "13500",
+				"sonic_wui_bank_name": "ICICI",
+				"sonic_wui_interest_rate": "8.5",
+				"sonic_wui_term": "48",
+				"sonic_wui_monthly_payment": "200"
+			},
+			"expected_result": {
+				"status": "success"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "save_details_for_documents",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/financing/save_details_for_documents",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_user_id": "lio",
+				"sonic_wui_photos": [
+					{
+						"sonic_wui_photo_type": "DL",
+						"sonic_wui_photo_file": "1111.jpeg"
+					},
+					{
+						"sonic_wui_photo_type": "IC",
+						"sonic_wui_photo_file": "1112.jpeg"
+					}
+				]
+			},
+			"expected_result": {
+				"status": "success"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "clear_documents",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/financing/clear_documents",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_user_id": "lio",
+				"sonic_wui_photo_type": "DL"
+			},
+			"expected_result": {
+				"status": "success"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_financing_details_from_products",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/financing/get_financing_details_from_products",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_tran_id": "111"
+			},
+			"expected_result": {
+				"data/sonic_wui_tran_id": "12121212",
+				"data/sonic_wui_price_list/[0]": "2989",
+				"data/sonic_wui_price_list/[1]": "599",
+				"data/sonic_wui_price_list/[2]": "549",
+				"status": "success"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_financing_details_from_welcome",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/financing/get_financing_details_from_welcome",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_tran_id": "111"
+			},
+			"expected_result": {
+				"data/sonic_wui_our_price": "18329.00",
+				"data/sonic_wui_taxes": "100",
+				"data/sonic_wui_fees": "50",
+				"status": "success"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_financing_details_for_finalize",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/financing/get_financing_details_for_finalize",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_tran_id": "111"
+			},
+			"expected_result": {
+				"data/sonic_wui_total_financed": "20038",
+				"data/sonic_wui_interest_rate": "4.7",
+				"data/sonic_wui_term": "24 Months",
+				"data/sonic_wui_lender": "Wells Fargo",
+				"data/sonic_wui_down_payment": "10000",
+				"data/sonic_wui_trade_in_amt": "2000",
+				"data/sonic_wui_products": "2989",
+				"data/sonic_wui_our_price": "18239",
+				"data/sonic_wui_taxes": "150",
+				"status": "success"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_financing_details_for_user",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/financing/get_financing_details_for_user",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_tran_id": "111",
+				"sonic_wui_user_id": "lio"
+			},
+			"expected_result": {
+				"data/tran_id": "121212",
+				"data/user_id": "lio@somesite.com",
+				"data/total_financed": "20038",
+				"data/interest_rate": "4.7",
+				"data/term": "24 Months",
+				"data/lender": "Wells Fargo",
+				"data/down_payment": "10000",
+				"data/trade_in_amt": "2000",
+				"data/products": "2989",
+				"data/our_price": "18239",
+				"data/taxes": "150",
+				"data/monthly_payment": "111",
+				"data/photos/[0]/photo_type": "IC",
+				"data/photos/[0]/photo_file": "someimage.jpg",
+				"data/photos/[1]/photo_type": "DL",
+				"data/photos/[1]/photo_file": "someotherimage.png",
+				"status": "success"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_plaid_balance",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/financing/get_plaid_balance",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_user_name": "user_good",
+				"sonic_wui_password": "pass_good",
+				"sonic_wui_institution_name": "Wells Fargo"
+			},
+			"expected_result": {
+				"data/[0]/available balance": "100",
+				"data/[0]/account name": "Plaid Checking",
+				"data/[0]/account full name": "Plaid Gold Standard 0% Interest Checking",
+				"data/[0]/account type": "depository",
+				"data/[1]/available balance": "200",
+				"data/[1]/account name": "Plaid Saving",
+				"data/[1]/account full name": "Plaid Silver Standard 0.1% Interest Saving",
+				"data/[1]/account type": "depository",
+				"data/[2]/available balance": "",
+				"data/[2]/account name": "Plaid Credit Card",
+				"data/[2]/account full name": "Plaid Diamond 12.5% APR Interest Credit Card",
+				"data/[2]/account type": "credit",
+				"status": "success"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_finalize_details_from_financing",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/finalize/get_finalize_details_from_financing",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_tran_id": "111"
+			},
+			"expected_result": {
+				"data/sonic_wui_total_financed": "20038",
+				"data/sonic_wui_interest_rate": "4.7",
+				"data/sonic_wui_term": "24 Months",
+				"data/sonic_wui_lender": "Wells Fargo",
+				"data/sonic_wui_down_payment": "10000",
+				"data/sonic_wui_trade_in_amt": "2000",
+				"data/sonic_wui_products": "2989",
+				"data/sonic_wui_our_price": "18239",
+				"data/sonic_wui_taxes": "150",
+				"status": "success"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "get_finalize_details_from_welcome",
+			"skip": "Yes",
+			"endPoint": "https://qaapp.carcash.com/finalize/get_finalize_details_from_welcome",
+			"requestType": "POST",
+			"Body": {
+				"sonic_wui_tran_id": "111"
+			},
+			"expected_result": {
+				"data/sonic_wui_image": "",
+				"data/sonic_wui_car_name": "016 BMW 328ixDrive Sedan",
+				"data/sonic_wui_engine": "2.0L I-4 cyl",
+				"data/sonic_wui_mileage": "soft_validation",
+				"data/sonic_wui_mpg_range": "22.00/34.00",
+				"data/sonic_wui_interior_color": "Beige",
+				"data/sonic_wui_location": "EchoPark Charlotte",
+				"status": "success"
+			}
+		}
+	}
+]

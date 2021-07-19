@@ -1,0 +1,1475 @@
+[
+	{
+		"Apis": {
+			"APIName": "getDefaultSkillDetails",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getDefaultSkillDetails",
+			"requestType": "POST",
+			"Body": {
+				"data": {
+					"e_id": "AAIN0398"
+				}
+			},
+			"expected_result": {
+				"data[0]/result": "success",
+				"data[0]/Primary[0]/recency_score": "soft_validation/Number",
+				"data[0]/Primary[0]/evaluation_qtr": "soft_validation/Text",
+				"data[0]/Primary[0]/matrix_score": "soft_validation/Number",
+				"data[0]/Primary[0]/s_type": "primary",
+				"data[0]/Primary[0]/experience_score": "soft_validation/Number",
+				"data[0]/Primary[0]/manager_e_id": "soft_validation/Text",
+				"data[0]/Primary[0]/manager_name": "null",
+				"data[0]/Primary[0]/s_id": "soft_validation/Number",
+				"data[0]/Primary[0]/e_id": "soft_validation/Text",
+				"data[0]/Primary[0]/evaluated_on": "null",
+				"data[0]/Primary[0]/id": "soft_validation/Number",
+				"data[0]/Primary[0]/skill_score": "soft_validation/Number",
+				"data[0]/Primary[0]/evaluated": "soft_validation/Number",
+				"data[0]/Primary[0]/s_name": "soft_validation/Text"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "basicDetails",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/basicDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				"data[0]/result": "success",
+				"data[0]/data/college[0]/Map_College_Name": "soft_validation/Text",
+				"data[0]/data/college[0]/Map_College_Id": "soft_validation/Number"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "getScoreWeight",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getScoreWeight",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				"data[0]/result": "success",
+				"data[0]/data[0]/updated_ts": "13-02-2020",
+				"data[0]/data[0]/item": "soft_validation/Text",
+				"data[0]/data[0]/updated_by": "AAIN0026",
+				"data[0]/data[0]/value": "soft_validation/Number"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "My_profile_getBasicDetails",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getBasicDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Resourcing_basic_details",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/basicDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				"data[0]/result": "success",
+				"data[0]/data/college[0]/Map_College_Name": "soft_validation/Text",
+				"data[0]/data/college[0]/Map_College_Id": "soft_validation/Number"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Resourcing_account_Details",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/accountDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				"data[0]/result": "success",
+				"data[0]/data[0]/Account_Id": "soft_validation/Number",
+				"data[0]/data[0]/Address": "Acc. Addr.",
+				"data[0]/data[0]/Email_Id": "test@aa.com",
+				"data[0]/data[0]/Country": "USA",
+				"data[0]/data[0]/Contact_Person": "Person to Contact",
+				"data[0]/data[0]/Account_Name": "Account-1",
+				"data[0]/data[0]/Phone_Number": "+1234567890",
+				"data[0]/data[0]/Delivery_Manager": "AAIN0003",
+				"data[0]/data[0]/City": "San Mateo",
+				"data[0]/data[0]/Account_Manager": "AAIN0003"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Revenue_account_Details",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/accountDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				"data[0]/result": "success",
+				"data[0]/data[0]/Account_Id": "soft_validation/Number",
+				"data[0]/data[0]/Address": "Acc. Addr.",
+				"data[0]/data[0]/Email_Id": "test@aa.com",
+				"data[0]/data[0]/Country": "USA",
+				"data[0]/data[0]/Contact_Person": "Person to Contact",
+				"data[0]/data[0]/Account_Name": "Account-1",
+				"data[0]/data[0]/Phone_Number": "+1234567890",
+				"data[0]/data[0]/Delivery_Manager": "AAIN0003",
+				"data[0]/data[0]/City": "San Mateo",
+				"data[0]/data[0]/Account_Manager": "AAIN0003"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Revenue_SOWDetails",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/SOWDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				"data[0]/result": "success",
+				"data[0]/data[0]/SOW_Id": "soft_validation/Number",
+				"data[0]/data[0]/SOW_Name": "soft_validation/Text",
+				"data[0]/data[0]/SOW_Number": "soft_validation/NumberText",
+				"data[0]/data[0]/MSA_Id": "soft_validation/Number",
+				"data[0]/data[0]/SOW_Description": "soft_validation/Text",
+				"data[0]/data[0]/SOW_Value": "soft_validation/NumberText",
+				"data[0]/data[0]/SOW_No_Of_Persons": "soft_validation/NumberText",
+				"data[0]/data[0]/SOW_Onsite_Count": "soft_validation/NumberText",
+				"data[0]/data[0]/SOW_Offshore_Count": "soft_validation/NumberText",
+				"data[0]/data[0]/SOW_Onsite_Rate": "soft_validation/NumberText",
+				"data[0]/data[0]/SOW_Max_Onsite_Hours_Per_Day": "soft_validation/NumberText",
+				"data[0]/data[0]/SOW_Offshore_Rate": "soft_validation/NumberText",
+				"data[0]/data[0]/SOW_Invoice_Frequency": "monthly",
+				"data[0]/data[0]/SOW_Invoice_Credit_Period": "soft_validation/NumberText",
+				"data[0]/data[0]/SOW_Document": "test.pdf",
+				"data[0]/data[0]/SOW_Max_Offshore_Hours_Per_Day": "soft_validation/NumberText",
+				"data[0]/data[0]/SOW_Currency": "INR",
+				"data[0]/data[0]/SOW_Curr_Conversion": "soft_validation/Number",
+				"data[0]/data[0]/SOW_Additional": "SOW Addnl.",
+				"data[0]/data[0]/Approval_Status": "Approved"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Revenue_getRevenue",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getRevenue",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Travel",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getTravelRequest",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Travel_Travel_request",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getAccSOWDesDep",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				"data[0]/result": "success",
+				"data[0]/sow[0]/Account_Id": "soft_validation/Number",
+				"data[0]/sow[0]/Account_Name": "Account-1",
+				"data[0]/sow[0]/SOW_Id": "soft_validation/Number",
+				"data[0]/sow[0]/SOW_Name": "SOW-1"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Travel_Action",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getAccSOWDesDep",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				"data[0]/result": "success",
+				"data[0]/desdep[0]/Designation_Name": "Graduate Analyst",
+				"data[0]/desdep[0]/Department_Id": "soft_validation/Number",
+				"data[0]/desdep[0]/Designation_Id": "soft_validation/Number",
+				"data[0]/desdep[0]/Department_Name": "Department-3",
+				"data[0]/purpose[0]/id": "soft_validation/Number",
+				"data[0]/purpose[0]/travel_purpose": "Account Mining",
+				"data[0]/sow[0]/Account_Id": "soft_validation/Number",
+				"data[0]/sow[0]/Account_Name": "Account-1",
+				"data[0]/sow[0]/SOW_Id": "soft_validation/Number",
+				"data[0]/sow[0]/SOW_Name": "SOW-1"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Travel_edit_details",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getAccSOWDesDep",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Travel_cancel_button",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getTravelRequest",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "QA_More",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/basicDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "QA_View_QA",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/api/getQAWeeklyData",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Hiring",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getHiringData",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				"data/result": "success",
+				"data/data[0]/travel_required": "no",
+				"data/data[0]/min_experience_years": "soft_validation/Nummber",
+				"data/data[0]/poc": "AAIN0002",
+				"data/data[0]/project": "Project-120",
+				"data/data[0]/duration": "long-term"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Hiring_view_history",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getHiringHistory",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Hiring_edit_details_save_button",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/updateHiringRequirement",
+			"requestType": "PUT",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Hiring_edit_details_save_button1",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getHiringData",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				"data/result": "success",
+				"data/data[0]/id": "soft_validation/Number",
+				"data/data[0]/account": "Account-120",
+				"data/data[0]/project": "Project-120",
+				"data/data[0]/owner": "AAIN0001",
+				"data/data[0]/no_of_positions": "soft_validation/Number",
+				"data/data[0]/designation": "239",
+				"data/data[0]/priority": "medium",
+				"data/data[0]/eta_weeks": "soft_validation/Number",
+				"data/data[0]/offshore_onsite": "offshore",
+				"data/data[0]/status": "open",
+				"data/data[0]/min_experience_years": "soft_validation/Number",
+				"data/data[0]/min_experience_months": "soft_validation/Number",
+				"data/data[0]/max_experience_years": "soft_validation/Number",
+				"data/data[0]/max_experience_months": "soft_validation/Number",
+				"data/data[0]/new_replacement": "new",
+				"data/data[0]/skills": "Python, Flask, dockers",
+				"data/data[0]/owner_comments": "We need someone who has created microservices. Python is must along with Flask or Django framework. Dockers is always an add-on.",
+				"data/data[0]/job_location": "Bangalore",
+				"data/data[0]/poc": "AAIN0002",
+				"data/data[0]/travel_required": "no",
+				"data/data[0]/duration": "long-term",
+				"data/data[0]/probability_of_conversion": "soft_validation/Number",
+				"data/data[0]/created_at": "2020-03-09T01:54:09.000Z",
+				"data/data[0]/created_by": "AAIN0001"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Revenue1",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/accountDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				"data[0]/result": "success",
+				"data[0]/data[0]/Account_Id": "soft_validation/Number",
+				"data[0]/data[0]/Address": "Acc. Addr.",
+				"data[0]/data[0]/Email_Id": "test@aa.com",
+				"data[0]/data[0]/Country": "USA",
+				"data[0]/data[0]/Contact_Person": "Person to Contact",
+				"data[0]/data[0]/Account_Name": "Account-1",
+				"data[0]/data[0]/Phone_Number": "+1234567890",
+				"data[0]/data[0]/Delivery_Manager": "AAIN0003",
+				"data[0]/data[0]/City": "San Mateo",
+				"data[0]/data[0]/Account_Manager": "AAIN0003"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Revenue2",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/SOWDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				"data[0]/result": "success",
+				"data[0]/data[0]/SOW_Document": "test.pdf",
+				"data[0]/data[0]/SOW_Onsite_Rate": "soft_validation/NumberText",
+				"data[0]/data[0]/MSA_Id": "soft_validation/Number",
+				"data[0]/data[0]/SOW_Name": "SOW-444",
+				"data[0]/data[0]/SOW_Number": "soft_validation/NumberText",
+				"data[0]/data[0]/SOW_Offshore_Count": "soft_validation/NumberText",
+				"data[0]/data[0]/SOW_Additional": "SOW Addnl.",
+				"data[0]/data[0]/SOW_Max_Onsite_Hours_Per_Day": "soft_validation/NumberText",
+				"data[0]/data[0]/SOW_Currency": "INR",
+				"data[0]/data[0]/SOW_Id": "soft_validation/Number",
+				"data[0]/data[0]/SOW_Offshore_Rate": "soft_validation/NumberText",
+				"data[0]/data[0]/SOW_Invoice_Frequency": "monthly",
+				"data[0]/data[0]/SOW_Curr_Conversion": "soft_validation/Number",
+				"data[0]/data[0]/Approval_Status": "Approved",
+				"data[0]/data[0]/SOW_Invoice_Credit_Period": "soft_validation/NumberText",
+				"data[0]/data[0]/SOW_Max_Offshore_Hours_Per_Day": "soft_validation/NumberText",
+				"data[0]/data[0]/SOW_No_Of_Persons": "soft_validation/NumberText",
+				"data[0]/data[0]/SOW_Value": "soft_validation/NumberText",
+				"data[0]/data[0]/SOW_Onsite_Count": "soft_validation/NumberText",
+				"data[0]/data[0]/SOW_Description": "SOW-Desc-444"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Revenue3",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getRevenue",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Revenue_Forecasted_revenue_Adjustment1",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/accountDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Revenue_Forecasted_revenue_Adjustment2",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/SOWDetails/",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Revenue_Forecasted_revenue_Adjustment3",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getRevenue/",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Revenue_Recognised_revenue",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/accountDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Revenue_Recognised_revenue2",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/SOWDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Revenue_Recognised_revenue3",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getRevenue",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Revenue_Invoice1",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getRevenueInvoices/",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Revenue_Invoice2",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/accountDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Accounts1",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/basicDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				"data[0]/result": "success",
+				"data[0]/data/college[0]/Map_College_Name": "soft_validation/Text",
+				"data[0]/data/college[0]/Map_College_Id": "soft_validation/Number",
+				"data[0]/data/resourceTypes[0]/Type": "soft_validation/Text",
+				"data[0]/data/resourceTypes[0]/Id": "soft_validation/Number",
+				"data[0]/data/workLocations[0]/Work_Location": "soft_validation/Text",
+				"data[0]/data/education[0]/Map_Education_Name": "soft_validation/Text",
+				"data[0]/data/education[0]/Map_Education_Id": "soft_validation/Number",
+				"data[0]/data/projects[0]/Address": "soft_validation/Text"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Accounts2",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/accountDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				"data[0]/result": "success",
+				"data[0]/data[0]/Account_Id": "soft_validation/Number",
+				"data[0]/data[0]/Address": "soft_validation/Text",
+				"data[0]/data[0]/Email_Id": "soft_validation/Text",
+				"data[0]/data[0]/Country": "soft_validation/Text",
+				"data[0]/data[0]/Contact_Person": "soft_validation/Text",
+				"data[0]/data[0]/Account_Name": "soft_validation/Text",
+				"data[0]/data[0]/Phone_Number": "soft_validation/NumberText",
+				"data[0]/data[0]/Delivery_Manager": "soft_validation/Text",
+				"data[0]/data[0]/City": "soft_validation/Text",
+				"data[0]/data[0]/Account_Manager": "soft_validation/Text"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Account_Export",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/accountReport",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": " Account_delete_option",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/api/deleteAccount/11/",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Accounts_Utilization",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/api/getUtilizationData",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Accounts_Utilization2",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/api/getProjUtilData",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Accounts_Utilization3",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/api/getResources",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Accounts_Offshore_resources",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/api/getResources",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Accounts_Onsite_resources",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/api/getResources",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Accounts_Ex-resources",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/api/getExResources",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Reports_Attrition",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/api/getAttritionData/",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Reports_Contact",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/reportsEmpContactDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Reports_Designation",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/designationCounts/",
+			"requestType": "POST",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Reports_Educational_qualification",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/reportsEmpEdu",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Reports_Employee_experience",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/empExperieceCount",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Reports_Employee_Details",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/api/employeereportdetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Reports_Personal_Details",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/empPersonalDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Reports_Revenue_forecast_report_summary1",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/api/getFRAccSows",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Reports_Revenue_Forecast_report_summary2",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/api/getForecastedSummary",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Reports_Renewals1",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/api/getFRInputData",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Reports_Renewals2",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/api/getFRAccSows",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Reports_New-Threads_in_existing_count",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/api/getFRInputData",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Reports_New_threads_in_existing_count2",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/api/getFRAccSows",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Reports_New_accounts",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/api/getFRInputData",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Reports_New_accounts2",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/api/getFRAccSows",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Profile",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getBasicDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Profile_Finance",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getBankDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Profile_Finance2",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getPayRollDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Profile_Family",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getFamilyDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Profile_Passport_visa",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getPassportDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Profile_Education",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getEducationDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Profile_Experience1",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/api/getEmpCompanyHistory",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Profile_Experience2",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getExperienceDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Profile_History",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/api/getEmpCompanyHistory",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Profile_Resign",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/api/getResAppUpdate",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Dashobaord_Reimbursement_affine_Inc_form",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/uploads/Reimbursement/Reimbursement_affine_Inc_form.pdf",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Dashobaord_Reimbursement_affine_India_form",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/uploads/Reimbursement/Reimbursement_revise_India.pdf",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Dashboard_Sow_notification_click",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/SOWDetails/",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Skills",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getScoreWeight",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "skills2",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getDefaultSkillDetails",
+			"requestType": "POST",
+			"Body": {
+				"data": {
+					"e_id": "AAIN0398"
+				}
+			},
+			"expected_result": {
+				"data[0]/result": "success",
+				"data[0]/Primary[0]/recency_score": "soft_validation/Number",
+				"data[0]/Primary[0]/evaluation_qtr": "soft_validation/Text",
+				"data[0]/Primary[0]/matrix_score": "soft_validation/Number",
+				"data[0]/Primary[0]/s_type": "primary",
+				"data[0]/Primary[0]/experience_score": "soft_validation/Number",
+				"data[0]/Primary[0]/manager_e_id": "soft_validation/Text",
+				"data[0]/Primary[0]/manager_name": "null",
+				"data[0]/Primary[0]/s_id": "soft_validation/Number",
+				"data[0]/Primary[0]/e_id": "soft_validation/Text",
+				"data[0]/Primary[0]/evaluated_on": "null",
+				"data[0]/Primary[0]/id": "soft_validation/Number",
+				"data[0]/Primary[0]/skill_score": "soft_validation/Number",
+				"data[0]/Primary[0]/evaluated": "soft_validation/Number",
+				"data[0]/Primary[0]/s_name": "soft_validation/Text"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Skill_skill_input_Evaluation_quarter",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getSkillDetailsHistory",
+			"requestType": "POST",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Skills_Approval1",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getApprovalEmployeeList",
+			"requestType": "POST",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Skills_Approval2",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getApprovalEmployeeList",
+			"requestType": "POST",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Skills_Approval_show_button",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getSkillDetailsHistory",
+			"requestType": "POST",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Skills_Resourcing_report1",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getSkillsList",
+			"requestType": "POST",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Skills_Resourcing_report2",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getScoreWeight",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Skills_Resourcing_report3",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getReportEmployeeList",
+			"requestType": "POST",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Skills_Resourcing_report4",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getReport",
+			"requestType": "POST",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Skills_Resourcin_report5",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getDesignationList",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Skills_Resourcing_report6",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/Currentdeployment",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Skills_Upskill_report1",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getSkillsList",
+			"requestType": "POST",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Skills_Upskill_report2",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getScoreWeight",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Skills_Upskill_report3",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getReportEmployeeList",
+			"requestType": "POST",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Skills_Upskill_report_4",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getReport",
+			"requestType": "POST",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Skills_Upskill_report5",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getDesignationList",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Skills_Upskill_report_6",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/Currentdeployment",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Skills_Horizon_report_1",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getSkillsList",
+			"requestType": "POST",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Skills_Horizon_report2",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getReport",
+			"requestType": "POST",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Skills_Horizon_report3",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getDesignationList",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Skills_Horizon_report4",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/Currentdeployment",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Skills_Settings",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/getScoreWeight",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Skills_Settings_update_button",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3101/UpdateScoreWeight",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	}
+]

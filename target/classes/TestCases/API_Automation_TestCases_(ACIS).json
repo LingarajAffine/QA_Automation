@@ -1,0 +1,166 @@
+[
+	{
+		"Apis": {
+			"APIName": "getDefaultSkillDetails",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3100/getDefaultSkillDetails",
+			"requestType": "POST",
+			"Body": {
+				"data": {
+					"e_id": "AAIN0398"
+				}
+			},
+			"expected_result": {
+				"data[0]/result": "success",
+				"data[0]/Primary[0]/recency_score": "soft_validation/Number",
+				"data[0]/Primary[0]/evaluation_qtr": "soft_validation/Text",
+				"data[0]/Primary[0]/matrix_score": "soft_validation/Number",
+				"data[0]/Primary[0]/s_type": "primary",
+				"data[0]/Primary[0]/experience_score": "soft_validation/Number",
+				"data[0]/Primary[0]/manager_e_id": "soft_validation/Text",
+				"data[0]/Primary[0]/manager_name": "null",
+				"data[0]/Primary[0]/s_id": "soft_validation/Number",
+				"data[0]/Primary[0]/e_id": "soft_validation/Text",
+				"data[0]/Primary[0]/evaluated_on": "null",
+				"data[0]/Primary[0]/id": "soft_validation/Number",
+				"data[0]/Primary[0]/skill_score": "soft_validation/Number",
+				"data[0]/Primary[0]/evaluated": "soft_validation/Number",
+				"data[0]/Primary[0]/s_name": "soft_validation/Text"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "basicDetails",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3100/basicDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				"data[0]/result": "success",
+				"data[0]/data/college[0]/Map_College_Name": "soft_validation/Text",
+				"data[0]/data/college[0]/Map_College_Id": "soft_validation/Number"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "getScoreWeight",
+			"skip": "No",
+			"endPoint": "http://127.0.0.1:3100/getScoreWeight",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				"data[0]/result": "success"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "My profile_getBasicDetails",
+			"skip": "Yes",
+			"endPoint": " http://127.0.0.1:3100/getBasicDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				"status/message": "Failure",
+				"status/code": "400 Bad Request"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Resourcing_basic details",
+			"skip": "Yes",
+			"endPoint": "http://127.0.0.1:3100/basicDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Resourcing_account Details",
+			"skip": "Yes",
+			"endPoint": "http://127.0.0.1:3100/accountDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				"status/message": "Success.",
+				"status/code": "200"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Revenue_account Details",
+			"skip": "Yes",
+			"endPoint": "http://127.0.0.1:3100/accountDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				"status/message": "Success.",
+				"status/code": "200"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Revenue_SOWDetails",
+			"skip": "Yes",
+			"endPoint": "http://127.0.0.1:3100/SOWDetails",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				"status/message": "Success.",
+				"status/code": "200"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Revenue_getRevenue",
+			"skip": "Yes",
+			"endPoint": "http://127.0.0.1:3100/getRevenue",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				"status/message": "Failure.",
+				"status/code": "400 Bad request"
+			}
+		}
+	},
+	{
+		"Apis": {
+			"APIName": "Hiring_getHiringData ",
+			"skip": "Yes",
+			"endPoint": "http://127.0.0.1:3100/getHiringData",
+			"requestType": "GET",
+			"Body": {
+				
+			},
+			"expected_result": {
+				"status/message": "Success.",
+				"status/code": "200"
+			}
+		}
+	}
+]

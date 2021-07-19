@@ -1,0 +1,16 @@
+{
+    "AuthApplicable": "Yes",
+    "auth": {
+        "Type": "JWT",
+        "Endpoint": "http://127.0.0.1:3101/authenticate"
+    },
+    "customHeaders": {
+        "": ""
+    },
+    "userCreds": {
+        "data": {
+            "username": "AAIN0398",
+            "password": "test@123"
+        }
+    }
+}
